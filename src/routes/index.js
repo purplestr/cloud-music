@@ -12,6 +12,7 @@ const SuspenseComponent = Component => props => {
   }
 
   const RecommendComponent = lazy(() => import("../application/Recommend"));
+  const AlbumComponent = lazy(() => import("../application/Album"));
 
 
 
@@ -31,12 +32,12 @@ export default [
                   {
                     path: "/recommend",
                     component: SuspenseComponent(RecommendComponent),
-                        // routes: [
-                        //   {
-                        //     path: "/recommend/:id",
-                        //     component: SuspenseComponent(AlbumComponent)
-                        //   }
-                        // ]
+                        routes: [
+                          {
+                            path: "/recommend/:id",
+                            component: SuspenseComponent(AlbumComponent)
+                          }
+                        ]
                       },
                 ]
             }

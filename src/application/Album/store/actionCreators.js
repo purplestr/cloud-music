@@ -12,7 +12,7 @@ export const changeTotalCount = (data) => ({
     data
 })
 
-export const chengePullLoading = (data) => ({
+export const changePullUpLoading = (data) => ({
     type: CHANGE_PULLUP_LOADING,
     data
 })
